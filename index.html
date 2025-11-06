@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepe - Página Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Pepe</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#about">Acerca de</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h2>Bienvenido a Pepe</h2>
+                <p>Tu solución digital completa</p>
+                <button class="cta-button" id="ctaButton">Comenzar</button>
+            </div>
+        </section>
+
+        <section id="servicios" class="services">
+            <h2>Nuestros Servicios</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Creamos sitios web modernos y responsivos adaptados a tus necesidades.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💡</div>
+                    <h3>Diseño Creativo</h3>
+                    <p>Diseños únicos que destacan tu marca y atraen a tu audiencia.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Optimización</h3>
+                    <p>Mejoramos el rendimiento y la velocidad de tu sitio web.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-content">
+                <h2>Acerca de Nosotros</h2>
+                <p>Somos un equipo dedicado a crear experiencias digitales excepcionales. 
+                   Con años de experiencia en desarrollo web, diseño y marketing digital, 
+                   ayudamos a las empresas a alcanzar sus objetivos en línea.</p>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <h2>Contacto</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Enviar</button>
+            </form>
+            <div id="formMessage" class="form-message"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Pepe. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
