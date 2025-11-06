@@ -58,7 +58,7 @@ if (contactForm) {
 
             // Hide message after 5 seconds
             setTimeout(() => {
-                formMessage.style.display = 'none';
+                formMessage.className = 'form-message';
             }, 5000);
         } else {
             formMessage.textContent = 'Por favor, completa todos los campos.';
@@ -86,22 +86,18 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '0';
-            entry.target.style.transform = 'translateY(20px)';
-            
-            setTimeout(() => {
-                entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }, 100);
-            
+            entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
             observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-// Observe all service cards
+// Observe all service cards - initially hidden
 document.querySelectorAll('.card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
     observer.observe(card);
 });
 
